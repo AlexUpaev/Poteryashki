@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+Списки пропавших
+{% endblock %}
+
+{% block content %}
+<h1>Списки пропавших</h1>
+
+{% for post in posts %}
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="data:image/jpeg;base64,{{ post.Photo }}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+
+        </div>            <div class="card-body">
+                <h5 class="card-title">{{post.Surname}} {{post.Name}}  {{post.Patronymic}}</h5>
+                <p class="card-text">{{post.Description}}</p>
+                <p class="card-text"><small class="text-muted">Дата рождения: {{ '%02d.%02d.%04d' | format(post.DataOfBirth.day, post.DataOfBirth.month, post.DataOfBirth.year) }}</small></p>
+                <p class="card-text"><small class="text-muted">Дата последнего появления: {{ '%02d.%02d.%04d' | format(post.DataOfLastAppearance.day, post.DataOfLastAppearance.month, post.DataOfLastAppearance.year) }}</small></p>
+                <p class="card-text"><small class="text-muted">Место последнего появления: {{post.PlaceOfLastAppearance}}</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+
+
