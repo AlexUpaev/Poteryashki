@@ -14,6 +14,37 @@ height: 48px;
 width: 48px;
 }
 
+
+
+/* Стили главной страницы */
+
+.maincontent {
+
+}
+
+.articles {
+
+}
+
+.divblock {
+    display: block;
+
+    max-width: 538px;
+    max-height: 1128;
+    width: auto;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Titels {
+    font-size: 30px;
+}
+
+.maintext {
+    font-size: 26px;
+}
 footer {
     position: fixed;
     bottom: 0px;
@@ -25,13 +56,36 @@ footer {
     color: #eee;
 }
 
+/* Стили списка пропавших */
+.cardsection{
+    /* width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: cpace-around;
+    flex-flow: wrap; */
+}
+
 .card {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3px;
+    max-width: 540px; 
+}
+
+.col {
+    max-width: 538px;
+    max-height: 1128;
+    width: auto;
+    height: auto;
 }
 
 .spisokimg{
+    max-width: 538px;
+    max-height: 1128;
+    width: auto;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
 }

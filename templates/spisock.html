@@ -7,16 +7,15 @@
 {% block content %}
 <h1>Списки пропавших</h1>
 
+<div class = "cardsection">
 {% for post in posts %}
-<div class="card mb-3" style="max-width: 540px;">
+<div class="card">
     <div class="row g-0">
-        <div class="col-md-4">
-            <img src="data:image/jpeg;base64,{{ post.Photo }}" class="img-fluid rounded-start" alt="...">
+        <div class="col">
+            <img class="spisokimg" src="data:image/jpeg;base64,{{ post.Photo }}" class="img-fluid rounded-start" alt="...">
         </div>
-        <div class="col-md-8">
-
-        </div>            <div class="card-body">
-                <h5 class="card-title">{{post.Surname}} {{post.Name}}  {{post.Patronymic}}</h5>
+            <div class="card-body">
+                <h5 class="card-title">{{post.Name}} {{post.Surname}} {{post.Patronymic}}</h5>
                 <p class="card-text">{{post.Description}}</p>
                 <p class="card-text"><small class="text-muted">Дата рождения: {{ '%02d.%02d.%04d' | format(post.DataOfBirth.day, post.DataOfBirth.month, post.DataOfBirth.year) }}</small></p>
                 <p class="card-text"><small class="text-muted">Дата последнего появления: {{ '%02d.%02d.%04d' | format(post.DataOfLastAppearance.day, post.DataOfLastAppearance.month, post.DataOfLastAppearance.year) }}</small></p>
@@ -26,8 +25,9 @@
     </div>
 </div>
 {% endfor %}
+</div>
 
+<div>
+    <p>Ha-ha-ha</p>
+</div>
 {% endblock %}
-
-
-
